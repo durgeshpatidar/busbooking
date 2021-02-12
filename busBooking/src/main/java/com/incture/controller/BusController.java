@@ -34,14 +34,14 @@ public class BusController {
 	{
 		bus.toString();
 		busService.add(bus);
-		return new ResponseEntity<>(bus.toString()+" added ",HttpStatus.OK);
+		return new ResponseEntity<String>(bus.toString()+" added ",HttpStatus.OK);
 	}
 	
 	@PostMapping(value="/delete")
 	public ResponseEntity<String> delete(@RequestBody Bus bus)
 	{
 		busService.delete(bus.getId());
-		return new ResponseEntity<>(" deleted ",HttpStatus.OK);
+		return new ResponseEntity<String>(" deleted ",HttpStatus.OK);
 	}
 	
 	@GetMapping("/showAll")

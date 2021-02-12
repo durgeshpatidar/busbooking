@@ -26,10 +26,10 @@ public class BookingController {
 		try
 		{
 		bookingService.booking(passengerid,busid);
-		return new ResponseEntity<>("booking successful for passenger id: "+passengerid+" and busid: "+busid,HttpStatus.OK);
+		return new ResponseEntity<String>("booking successful for passenger id: "+passengerid+" and busid: "+busid,HttpStatus.OK);
 		}catch(Exception e)
 		{
-			return new ResponseEntity<>("Error :"+e.toString(),HttpStatus.BAD_REQUEST);
+			return new ResponseEntity<String>("Error :"+e.toString(),HttpStatus.BAD_REQUEST);
 		}
 	}
 	

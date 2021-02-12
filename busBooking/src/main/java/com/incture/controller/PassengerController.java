@@ -32,14 +32,14 @@ public class PassengerController {
 	{
 		passenger.toString();
 		passengerService.add(passenger);
-		return new ResponseEntity<>(passenger.toString()+" added ",HttpStatus.OK);
+		return new ResponseEntity<String>(passenger.toString()+" added ",HttpStatus.OK);
 	}
 	
 	@PostMapping(value="/delete")
 	public ResponseEntity<String> delete(@RequestBody Passenger passenger)
 	{
 		passengerService.delete(passenger.getId());
-		return new ResponseEntity<>(" deleted ",HttpStatus.OK);
+		return new ResponseEntity<String>(" deleted ",HttpStatus.OK);
 	}
 	
 	@GetMapping("/showAll")
